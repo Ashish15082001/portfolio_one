@@ -1,0 +1,66 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 80px 40px;
+  background: var(--color-bg);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(32px, 3.33vw, 48px);
+  line-height: 1.33;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* ── Tag grid ── */
+.tagGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  max-width: 1051px;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ── Individual tag ── */
+.tag {
+  border: 3px solid var(--color-tag-border);
+  border-radius: 120px;
+  padding: 15px 30px;
+  flex-shrink: 0;
+}
+
+.tagText {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(16px, 1.67vw, 24px);
+  line-height: 1.33;
+  background: var(--gradient-tag-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  white-space: nowrap;
+}
+
+/* ── Squiggle arrow ── */
+.squiggleWrapper {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.squiggle {
+  width: 100%;
+  height: auto;
+}

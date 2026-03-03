@@ -1,0 +1,72 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 80px 40px;
+  min-height: 100vh;
+  background: var(--color-bg);
+  text-align: center;
+}
+
+/* ── Avatar ── */
+.avatarWrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+}
+
+.avatarBg {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 216px;
+  height: 216px;
+  object-fit: cover;
+}
+
+.avatarFace {
+  position: absolute;
+  top: 47px;
+  left: 47px;
+  width: 186px;
+  height: 186px;
+  object-fit: cover;
+}
+
+.avatarDetail {
+  position: absolute;
+  top: 86px;
+  left: 48.5px;
+  width: 76px;
+  height: 118.5px;
+  object-fit: contain;
+}
+
+/* ── Headline ── */
+.headline {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(40px, 6.67vw, 96px);
+  line-height: 1.33;
+  background: var(--gradient-headline);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ── Decorative flourish ── */
+.flourishWrapper {
+  width: min(883px, 90vw);
+  flex-shrink: 0;
+}
+
+.flourish {
+  width: 100%;
+  height: auto;
+}

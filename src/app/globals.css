@@ -1,0 +1,39 @@
+:root {
+  --color-bg: #000000;
+  --color-white: #ffffff;
+  --color-tag-border: #dba6f4;
+
+  /* Gradient: headline (grape/lavender) */
+  --gradient-headline: linear-gradient(-90deg, #dba6f4 11.873%, #a981fe 100%);
+  /* Gradient: tag text (lime/yellow) */
+  --gradient-tag-text: linear-gradient(-90deg, #ffe597 11.873%, #aaff82 100%);
+  /* Gradient: section divider (sunset) */
+  --gradient-sunset: linear-gradient(-90deg, #ffb347 0%, #ff6b6b 100%);
+
+  --font-heading: var(--font-space-mono), monospace;
+  --font-body: var(--font-dm-sans), sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

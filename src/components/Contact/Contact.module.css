@@ -1,0 +1,82 @@
+.footer {
+  background: var(--color-bg);
+  padding: 0 80px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── Decorative divider ── */
+.divider {
+  height: 140px;
+  margin-bottom: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='140' fill='none'%3E%3Cpath d='M0 70 Q200 0 400 70 Q600 140 800 70' stroke='%23dba6f4' stroke-width='2' fill='none' opacity='0.4'/%3E%3C/svg%3E")
+    no-repeat center center;
+  background-size: contain;
+}
+
+/* ── 3-column links grid ── */
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(219, 166, 244, 0.2);
+  border-bottom: 1px solid rgba(219, 166, 244, 0.2);
+}
+
+/* ── Individual link card ── */
+.linkCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 20px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.linkCard:hover {
+  opacity: 0.75;
+}
+
+.iconBox {
+  width: 144px;
+  height: 144px;
+  border: 3px solid var(--color-tag-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(219, 166, 244, 0.05);
+}
+
+.iconText {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 32px;
+  background: var(--gradient-headline);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.linkDesc {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.04vw, 16px);
+  line-height: 1.6;
+  color: var(--color-white);
+  opacity: 0.7;
+  text-align: center;
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 40px 80px;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+}
