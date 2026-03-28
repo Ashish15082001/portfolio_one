@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
   padding: 80px 40px;
   min-height: 100vh;
   background: var(--color-bg);
@@ -69,4 +68,14 @@
 .flourish {
   width: 100%;
   height: auto;
+}
+
+.avatarContainer {
+  position: relative;
+  width: 380px;
+  height: 380px;
+}
+
+.springAnimationContainer {
+  margin-top: 100px;
 }
