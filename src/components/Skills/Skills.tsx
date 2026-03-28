@@ -4,7 +4,7 @@ import { motion, type Variants } from "framer-motion";
 import styles from "./Skills.module.css";
 
 const SKILL_ROWS = [
-  ["HTML & CSS", "Javascript", "Typescript", "React", "NextJS"],
+  ["HTML & CSS", "Javascript", "TypeScript", "React", "NextJS"],
   ["NodeJs", "ExpressJS", "Product Design", "Android Development"],
   ["Web Development", "IOS Development", "Guitar", "Cooking"],
 ];
@@ -68,6 +68,7 @@ function Tag({ label }: { label: string }) {
       style={{ rotate: rotation }}
     >
       <span className={styles.tagText}>{label}</span>
+      <span className={styles.experienceText}>4 years</span>
     </motion.div>
   );
 }
