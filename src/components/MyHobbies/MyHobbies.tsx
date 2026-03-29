@@ -1,8 +1,26 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Step, { StepProps } from "../step/Step";
 import YoutubeFrame from "../YoutubeFrame/YoutubeFrame";
-import styles from "./Hobbies.module.css";
+import styles from "./MyHobbies.module.css";
 import blender from "@/images/blender.png";
+import twinkle from "@/animations/twinkle.json";
+import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
+import curvedArrow from "@/icons/curved-bottom-left-arrow.svg";
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
+  },
+};
+
+const viewport = { once: false, amount: 0.4 };
 
 const HOBBIES: StepProps[] = [
   {
@@ -19,7 +37,7 @@ const HOBBIES: StepProps[] = [
     ],
     image: <Image src={blender} alt="Blender 3D renders" />,
     isReversed: true,
-    theme: "peach",
+    theme: "nordic",
   },
   {
     title: "Cycling",
@@ -35,7 +53,7 @@ const HOBBIES: StepProps[] = [
     ],
     image: <YoutubeFrame videoId="x3oOkC0JTcA" caption="50+ km" rotate={-2} />,
     isReversed: false,
-    theme: "mint",
+    theme: "nordic",
   },
   {
     title: "Guitar",
@@ -53,13 +71,49 @@ const HOBBIES: StepProps[] = [
       <YoutubeFrame videoId="JDy1CZ-9yEA" caption="Guitar Journey" rotate={2} />
     ),
     isReversed: true,
-    theme: "grape",
+    theme: "nordic",
   },
 ];
 
-export default function Hobbies() {
+export default function MyHobbies() {
   return (
-    <section className={styles.hobbiesSection}>
+    <section className={styles.myHobbiesSection}>
+      {/* intro */}
+      <section className={styles.introSection}>
+        {/* title */}
+        <motion.div
+          className={styles.headingContainer}
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
+          <h2 className={`${styles.heading} title`}>My Hobbies</h2>
+          <LottieAnimation animationData={twinkle} className={styles.twinkle} />
+        </motion.div>
+
+        {/* description */}
+        <div className={styles.descriptionContainer}>
+          <motion.p
+            className={`quote-text ${styles.leftDescription}`}
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
+            I HAVE SOME INTERESTS OTHER THAN CODING LIKE LEARNING HOW MODELS ARE
+            MADE USING BLENDER, LEARNING MUSIC THEORY, PLAYING GUITAR, CYCLING,
+            PLAYING VIDEO GAMES ETC.
+          </motion.p>
+
+          <Image
+            src={curvedArrow}
+            alt="Curved Bottom Left Arrow"
+            className={styles.curvedArrow}
+          />
+        </div>
+      </section>
+
       {HOBBIES.map((hobby, i) => (
         <Step
           key={i}

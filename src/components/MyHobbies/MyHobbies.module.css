@@ -1,0 +1,54 @@
+.myHobbiesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 80px 40px;
+}
+
+.introSection {
+  width: 100%;
+}
+
+.headingContainer {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 90px;
+}
+
+.twinkle {
+  position: absolute;
+  bottom: 30%;
+  right: -90px;
+  height: 100px;
+}
+
+.heading {
+  color: var(--color-light);
+  text-align: center;
+}
+
+.descriptionContainer {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.leftDescription {
+  background: var(--gradient-mint);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-top: 200px;
+  max-width: 480px;
+}
+
+.curvedArrow {
+  flex: 1;
+  min-width: 0;
+  max-height: 500px;
+  object-fit: contain;
+}
