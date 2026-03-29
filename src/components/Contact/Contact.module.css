@@ -1,59 +1,97 @@
 .footer {
   background: var(--color-bg);
-  padding: 0 80px 80px;
-  max-width: 1440px;
+  padding: 0 80px 100px;
+}
+
+/* ── Inner wrapper ── */
+.inner {
+  max-width: 1100px;
   margin: 0 auto;
-}
-
-/* ── Decorative divider ── */
-.divider {
-  height: 140px;
-  margin-bottom: 60px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='140' fill='none'%3E%3Cpath d='M0 70 Q200 0 400 70 Q600 140 800 70' stroke='%23dba6f4' stroke-width='2' fill='none' opacity='0.4'/%3E%3C/svg%3E")
-    no-repeat center center;
-  background-size: contain;
-}
-
-/* ── 3-column links grid ── */
-.linksGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 40px 0;
-  border-top: 1px solid rgba(219, 166, 244, 0.2);
-  border-bottom: 1px solid rgba(219, 166, 244, 0.2);
-}
-
-/* ── Individual link card ── */
-.linkCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-  padding: 40px 20px;
+  gap: 64px;
+}
+
+/* ── Heading block ── */
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(40px, 5vw, 78px);
+  font-weight: 700;
+  line-height: 1.1;
+  background: var(--gradient-headline);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+  color: var(--color-light);
+  opacity: 0.6;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ── Cards row ── */
+.cardsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 780px;
+}
+
+/* ── Individual card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 48px 32px;
+  border: 2px solid var(--color-tag-border);
+  border-radius: 24px;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  background: rgba(219, 166, 244, 0.04);
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.linkCard:hover {
-  opacity: 0.75;
+.card:hover {
+  background: rgba(219, 166, 244, 0.1);
+  border-color: rgba(219, 166, 244, 0.8);
 }
 
-.iconBox {
-  width: 144px;
-  height: 144px;
-  border: 3px solid var(--color-tag-border);
+/* ── Icon circle ── */
+.iconCircle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--color-tag-border);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(219, 166, 244, 0.05);
+  background: rgba(219, 166, 244, 0.06);
 }
 
 .iconText {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
   background: var(--gradient-headline);
   -webkit-background-clip: text;
   background-clip: text;
@@ -61,22 +99,61 @@
   color: transparent;
 }
 
-.linkDesc {
+/* ── Card body ── */
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.cardLabel {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(18px, 1.67vw, 24px);
+  background: var(--gradient-tag-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.cardDesc {
   font-family: var(--font-body);
   font-size: clamp(14px, 1.04vw, 16px);
   line-height: 1.6;
   color: var(--color-light);
-  opacity: 0.7;
-  text-align: center;
-  max-width: 280px;
+  opacity: 0.6;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
+.cardSub {
+  font-family: var(--font-body);
+  font-size: clamp(12px, 0.9vw, 14px);
+  color: var(--color-tag-border);
+  opacity: 0.85;
+  word-break: break-all;
+}
+
+/* ── Copyright ── */
+.copyright {
+  font-family: var(--font-body);
+  font-size: clamp(12px, 0.9vw, 14px);
+  color: var(--color-light);
+  opacity: 0.35;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
   .footer {
-    padding: 0 40px 80px;
+    padding: 0 24px 80px;
   }
 
-  .linksGrid {
+  .cardsRow {
     grid-template-columns: 1fr;
+    max-width: 400px;
   }
 }

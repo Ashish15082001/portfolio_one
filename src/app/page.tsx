@@ -36,7 +36,9 @@ export default function Home() {
         <Today />
       </div>
 
-      {/* <Contact /> */}
+      <div data-theme-section="contact">
+        <Contact />
+      </div>
     </main>
   );
 }
