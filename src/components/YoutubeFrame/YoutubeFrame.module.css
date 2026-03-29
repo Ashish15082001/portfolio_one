@@ -14,7 +14,7 @@
 }
 
 .videoWrapper {
-  width: 260px;
+  width: 350px;
   aspect-ratio: 9 / 16;
   overflow: hidden;
   background: #000;
@@ -38,14 +38,28 @@
   text-align: center;
 }
 
+@media (max-width: 1280px) {
+  .videoWrapper {
+    width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .videoWrapper {
-    width: 200px;
+    width: 100%;
+  }
+
+  .polaroid {
+    width: 80%;
   }
 }
 
 @media (max-width: 480px) {
   .videoWrapper {
     width: 160px;
+  }
+
+  .polaroid {
+    width: 80%;
   }
 }

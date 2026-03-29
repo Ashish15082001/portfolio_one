@@ -3,7 +3,6 @@ import Step, { StepProps } from "../step/Step";
 import YoutubeFrame from "../YoutubeFrame/YoutubeFrame";
 import styles from "./Hobbies.module.css";
 import blender from "@/images/blender.png";
-import guitar from "@/images/guitar.png";
 
 const HOBBIES: StepProps[] = [
   {
@@ -50,7 +49,7 @@ const HOBBIES: StepProps[] = [
       { text: "Next will be either piano or violin!" },
       { text: "I will start singing too." },
     ],
-    image: <Image src={guitar} alt="Guitar" />,
+    image: <YoutubeFrame videoId="JDy1CZ-9yEA" caption="Guitar Journey" rotate={2} />,
     isReversed: true,
     theme: "grape",
   },
