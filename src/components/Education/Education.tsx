@@ -5,7 +5,6 @@ import nurseryToClass3Image from "@/images/nursery-to-class3.png";
 import clas4To10 from "@/images/class-4-10.png";
 import class11to12 from "@/images/class-11-12.png";
 import unviversity from "@/images/unviversity.png";
-import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
 import curvedDownArrowSky from "@/icons/curved-down-arrow-sky.svg";
 
 interface FactBadge {
@@ -29,6 +28,12 @@ const EDUCATION: StepProps[] = [
     image: <Image src={nurseryToClass3Image} alt="Nursery to Class 3" />,
     isReversed: false,
     theme: "sky",
+    links: [
+      {
+        text: "music used in dance performance",
+        url: "https://www.youtube.com/watch?v=9UzvpM3IwwY",
+      },
+    ],
   },
   {
     title: "Class 4 to 10",
@@ -114,6 +119,7 @@ export default function Education() {
           highlights={card.highlights}
           isReversed={card.isReversed}
           theme={card.theme}
+          links={card.links}
         />
       ))}
     </section>
