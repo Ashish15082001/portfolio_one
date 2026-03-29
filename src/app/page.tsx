@@ -11,14 +11,30 @@ import PersonalProjects from "@/components/PersonalProjects/PersonalProjects";
 export default function Home() {
   return (
     <main className="main-container">
-      <Welcome />
-      <Skills />
-      <MyJourney />
-      <Education />
-      <MyHobbies />
-      <Experience />
-      <PersonalProjects />
-      <Today />
+      <div data-theme-section="welcome">
+        <Welcome />
+      </div>
+      <div data-theme-section="skills">
+        <Skills />
+      </div>
+      <div data-theme-section="myjourney">
+        <MyJourney />
+      </div>
+      <div data-theme-section="education">
+        <Education />
+      </div>
+      <div data-theme-section="myhobbies">
+        <MyHobbies />
+      </div>
+      <div data-theme-section="experience">
+        <Experience />
+      </div>
+      <div data-theme-section="personalprojects">
+        <PersonalProjects />
+      </div>
+      <div data-theme-section="today">
+        <Today />
+      </div>
 
       {/* <Contact /> */}
     </main>

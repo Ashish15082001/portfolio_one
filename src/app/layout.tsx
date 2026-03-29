@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { publicSans } from "@/fonts/fonts";
+import FullscreenButton from "@/components/FullscreenButton/FullscreenButton";
+import { ScrollbarThemer } from "@/components/ScrollbarThemer/ScrollbarThemer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.className} antialiased`}>{children}</body>
+      <body className={`${publicSans.className} antialiased`}>
+        {children}
+        <FullscreenButton />
+        <ScrollbarThemer />
+      </body>
     </html>
   );
 }

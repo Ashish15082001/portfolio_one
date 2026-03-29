@@ -1,3 +1,15 @@
+/* ── Scrollbar theme variables (animatable via @property) ── */
+@property --scrollbar-color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #8c67f5;
+}
+@property --scrollbar-color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #d094ff;
+}
+
 :root {
   /* Core color tokens */
   --color-dark: #000000;
@@ -208,4 +220,38 @@ img {
 .main-container {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+/* ── Scrollbar theming ── */
+html {
+  transition:
+    --scrollbar-color-1 0.6s ease,
+    --scrollbar-color-2 0.6s ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--scrollbar-color-1) 0%,
+    var(--scrollbar-color-2) 100%
+  );
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.85;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color-1) var(--color-gray);
 }
