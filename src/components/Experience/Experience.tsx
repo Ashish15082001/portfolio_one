@@ -92,6 +92,17 @@ export default function MyExperience() {
           theme={hobby.theme}
         />
       ))}
+
+      {/* app demo video */}
+      <div className={styles.videoContainer}>
+        <iframe
+          src="https://www.youtube.com/embed/-AIbuRV0CE0?autoplay=0&rel=0"
+          title="App Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className={styles.videoIframe}
+        />
+      </div>
     </section>
   );
 }
