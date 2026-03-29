@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 import styles from "./Skills.module.css";
 
 const SKILL_ROWS = [
@@ -79,7 +79,7 @@ export default function Skills() {
       className={styles.skillsSection}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: false, amount: 0.4 }}
       variants={containerVariants}
     >
       <h2 className={`${styles.heading} title`}>Skills</h2>

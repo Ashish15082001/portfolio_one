@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Step, { StepProps } from "../step/Step";
 import styles from "./MyJourney.module.css";
 import Image from "next/image";
@@ -5,6 +7,19 @@ import Day1Image from "@/images/day-1.png";
 import twinkle from "@/animations/twinkle.json";
 import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
 import twoPathDownArrow from "@/icons/two-path-down-arrow.svg";
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
+  },
+};
+
+const viewport = { once: false, amount: 0.4 };
 
 const day1Step: StepProps = {
   title: "Day 1",
@@ -23,19 +38,30 @@ export default function MyJourney() {
       {/* intro */}
       <section className={styles.introSection}>
         {/* title */}
-        <div className={styles.headingContainer}>
+        <motion.div
+          className={styles.headingContainer}
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           <h2 className={`${styles.heading} title`}>My Journey</h2>
 
           <LottieAnimation animationData={twinkle} className={styles.twinkle} />
-        </div>
-
+        </motion.div>
         {/* description */}
         <div className={styles.descriptionContainer}>
           {/* left description */}
-          <p className={`quote-text ${styles.leftDescription}`}>
+          <motion.p
+            className={`quote-text ${styles.leftDescription}`}
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             I STARTED DOING PROGRAMMING WHEN I WAS 15. THEN I WENT WITH THE FLOW
             NOT KNOWING AI WILL REPLACE MY JOB!
-          </p>
+          </motion.p>
 
           <Image
             src={twoPathDownArrow}
@@ -44,7 +70,13 @@ export default function MyJourney() {
           />
 
           {/* right description */}
-          <p className={`caption ${styles.rightDescription}`}>
+          <motion.p
+            className={`caption ${styles.rightDescription}`}
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             I just came to know that taking science stream with computer will be
             good for future. I did not really know what i want to become! As i
             spent two years in this, I decided to continue. When in college, I
@@ -52,7 +84,7 @@ export default function MyJourney() {
             was in top 5! Then started with frontend and i liked that frontend
             is visible. Although i also learned backend as i wanted to build my
             full stack app.
-          </p>
+          </motion.p>
         </div>
       </section>
 
