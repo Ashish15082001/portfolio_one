@@ -35,7 +35,7 @@ export default function FullscreenButton() {
       {showOverlay && (
         <div className={styles.overlay} onClick={enterFullscreen}>
           <div className={styles.overlayContent}>
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
@@ -48,8 +48,8 @@ export default function FullscreenButton() {
               <path d="M21 7V3h-4" />
               <path d="M3 17v4h4" />
               <path d="M21 17v4h-4" />
-            </svg>
-            <span>Click to enter fullscreen</span>
+            </svg> */}
+            <span>Click to if your name is not in Epstein Files!</span>
           </div>
         </div>
       )}
