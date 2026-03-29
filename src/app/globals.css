@@ -1,17 +1,84 @@
 :root {
-  --color-bg: #000000;
-  --color-white: #ffffff;
-  --color-tag-border: #dba6f4;
+  /* Core color tokens */
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-gray: #1f1f1f;
+  --color-light-gray: #888888;
 
-  /* Gradient: headline (grape/lavender) */
-  --gradient-headline: linear-gradient(-90deg, #dba6f4 11.873%, #a981fe 100%);
-  /* Gradient: tag text (lime/yellow) */
+  --color-bg: var(--color-dark);
+  --color-text: var(--color-light);
+  --color-surface: #252525;
+  --color-border: #444444;
+
+  /* Palette gradients */
+  --gradient-sunset: linear-gradient(-90deg, #ffad60 0%, #ff5a6b 100%);
+  --gradient-grape: linear-gradient(-90deg, #8c67f5 0%, #d094ff 100%);
+  --gradient-blueberry: linear-gradient(-90deg, #a67eff 0%, #79baff 100%);
+  --gradient-sky: linear-gradient(-90deg, #6cbaff 0%, #d8f4ff 100%);
+  --gradient-nordic: linear-gradient(-90deg, #9b78ff 0%, #98ff9a 100%);
+  --gradient-mint: linear-gradient(-90deg, #9bf7ff 0%, #9cff85 100%);
+  --gradient-bless: linear-gradient(-90deg, #b9fd99 0%, #ffc764 100%);
+  --gradient-peach: linear-gradient(-90deg, #ffd69a 0%, #ff8f7f 100%);
+
+  /* Semantic gradient tokens */
+  --gradient-headline: var(--gradient-grape);
   --gradient-tag-text: linear-gradient(-90deg, #ffe597 11.873%, #aaff82 100%);
-  /* Gradient: section divider (sunset) */
-  --gradient-sunset: linear-gradient(-90deg, #ffb347 0%, #ff6b6b 100%);
+
+  --color-tag-border: #dba6f4;
 
   --font-heading: var(--font-space-mono), monospace;
   --font-body: var(--font-dm-sans), sans-serif;
+}
+
+/* Utility classes for quick prototyping */
+.bg-sunset {
+  background: var(--gradient-sunset);
+}
+.bg-grape {
+  background: var(--gradient-grape);
+}
+.bg-blueberry {
+  background: var(--gradient-blueberry);
+}
+.bg-sky {
+  background: var(--gradient-sky);
+}
+.bg-nordic {
+  background: var(--gradient-nordic);
+}
+.bg-mint {
+  background: var(--gradient-mint);
+}
+.bg-bless {
+  background: var(--gradient-bless);
+}
+.bg-peach {
+  background: var(--gradient-peach);
+}
+
+.text-sunset {
+  color: #ffad60;
+}
+.text-grape {
+  color: #8c67f5;
+}
+.text-blueberry {
+  color: #6fb8ff;
+}
+.text-sky {
+  color: #57b8ff;
+}
+.text-nordic {
+  color: #8c7bff;
+}
+.text-mint {
+  color: #65ff95;
+}
+.text-bless {
+  color: #ffbf5f;
+}
+.text-peach {
+  color: #ffa489;
 }
 
 *,
