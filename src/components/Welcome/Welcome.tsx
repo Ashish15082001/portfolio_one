@@ -10,10 +10,7 @@ export default function Welcome() {
         <LottieAnimation animationData={avatarAnimation} size={50} />
       </div>
 
-      <p className={styles.headline}>
-        Hi, I'm Ashish. Sit back, relax, and let's explore my world of
-        creativity together!
-      </p>
+      <p className={styles.headline}>Hi, I'm Ashish.</p>
 
       <div className={styles.springAnimationContainer}>
         <SpringAnimation />

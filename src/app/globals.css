@@ -195,7 +195,7 @@ html {
 
 body {
   background: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-light);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }

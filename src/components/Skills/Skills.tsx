@@ -76,13 +76,13 @@ function Tag({ label }: { label: string }) {
 export default function Skills() {
   return (
     <motion.section
-      className={styles.section}
+      className={styles.skillsSection}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.8 }}
       variants={containerVariants}
     >
-      <h2 className={styles.heading}>Skills</h2>
+      <h2 className={`${styles.heading} title`}>Skills</h2>
       <div className={styles.tagGrid}>
         {SKILL_ROWS.map((row, ri) => (
           <motion.div key={ri} className={styles.tagRow} variants={rowVariants}>

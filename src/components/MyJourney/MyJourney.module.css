@@ -1,0 +1,56 @@
+.myJourneySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 80px 40px;
+  /* border: 5px solid red; */
+}
+
+.introSection {
+  width: 100%;
+  /* border: 5px solid red; */
+}
+
+.headingContainer {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 90px;
+}
+
+.twinkle {
+  position: absolute;
+  bottom: 30%;
+  right: -90px;
+  height: 100px;
+}
+
+.heading {
+  color: var(--color-light);
+  text-align: center;
+}
+
+.descriptionContainer {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.leftDescription {
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  margin-top: 300px;
+}
+.rightDescription {
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

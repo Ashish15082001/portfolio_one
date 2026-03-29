@@ -1,6 +1,6 @@
 import Welcome from "@/components/Welcome/Welcome";
 import Skills from "@/components/Skills/Skills";
-import JourneyStart from "@/components/JourneyStart/JourneyStart";
+import MyJourney from "@/components/MyJourney/MyJourney";
 import Education from "@/components/Education/Education";
 import Hobbies from "@/components/Hobbies/Hobbies";
 import Today from "@/components/Today/Today";
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="main-container">
       <Welcome />
       <Skills />
-      <JourneyStart />
+      <MyJourney />
       <Education />
       <Hobbies />
       <Today />
