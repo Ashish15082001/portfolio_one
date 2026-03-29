@@ -2,7 +2,6 @@
   display: flex;
   padding: 80px;
   gap: 40px;
-  align-items: center;
 }
 
 .reversed {
@@ -18,20 +17,10 @@
 }
 
 .title {
-  background: var(--gradient-sky);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
 .subtitle {
   margin-top: 8px;
-  background: var(--gradient-sky);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
 .description {
@@ -54,4 +43,132 @@
 
 .highlight p {
   text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .step {
+    padding: 60px;
+    gap: 30px;
+  }
+
+  .textContent {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .reversed {
+    flex-direction: column;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+
+  .highlights {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .highlight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .step {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+
+  .description {
+    margin-top: 24px;
+  }
+
+  .highlights {
+    margin-top: 24px;
+  }
+
+  .highlight {
+    padding: 15px;
+  }
+}
+
+.step-theme-sunset .title,
+.step-theme-sunset .subtitle {
+  background: var(--gradient-sunset);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-grape .title,
+.step-theme-grape .subtitle {
+  background: var(--gradient-grape);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-blueberry .title,
+.step-theme-blueberry .subtitle {
+  background: var(--gradient-blueberry);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-sky .title,
+.step-theme-sky .subtitle {
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-nordic .title,
+.step-theme-nordic .subtitle {
+  background: var(--gradient-nordic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-mint .title,
+.step-theme-mint .subtitle {
+  background: var(--gradient-mint);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-bless .title,
+.step-theme-bless .subtitle {
+  background: var(--gradient-bless);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.step-theme-peach .title,
+.step-theme-peach .subtitle {
+  background: var(--gradient-peach);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

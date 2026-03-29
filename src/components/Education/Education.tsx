@@ -23,6 +23,7 @@ const EDUCATION: StepProps[] = [
     ],
     image: <Image src={nurseryToClass3Image} alt="Nursery to Class 3" />,
     isReversed: false,
+    theme: "sky",
   },
   {
     title: "Class 4 to 10",
@@ -35,6 +36,7 @@ const EDUCATION: StepProps[] = [
     ],
     image: <Image src={clas4To10} alt="Class 4 to 10" />,
     isReversed: true,
+    theme: "sky",
   },
   {
     title: "Class 11 to 12",
@@ -49,6 +51,7 @@ const EDUCATION: StepProps[] = [
     ],
     image: <Image src={class11to12} alt="Class 11 to 12" />,
     isReversed: false,
+    theme: "sky",
   },
 ];
 
@@ -64,6 +67,7 @@ export default function Education() {
           image={card.image}
           highlights={card.highlights}
           isReversed={card.isReversed}
+          theme={card.theme}
         />
       ))}
     </section>

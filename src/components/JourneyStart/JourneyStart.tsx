@@ -1,35 +1,28 @@
+import Step, { StepProps } from "../step/Step";
 import styles from "./JourneyStart.module.css";
+import Image from "next/image";
+import Day1Image from "@/images/day-1.png";
+
+const day1Step: StepProps = {
+  title: "Day 1",
+  description: `I was born in Uttarakhand. I was first child of my parents and first grand child of my grand parents.
+
+              My mother says i was very quiet and rarely cried. At age of 3, i joined school.`,
+  image: <Image src={Day1Image} alt="Day 1" className={styles.stepImage} />,
+  isReversed: true,
+  theme: "sky",
+};
 
 export default function JourneyStart() {
   return (
-    <section className={styles.section}>
-      <div className={styles.titleRow}>
-        <h2 className={styles.heading}>My design journey</h2>
-      </div>
-
-      <div className={styles.columns}>
-        <div className={styles.leftQuote}>
-          <p className={styles.quoteText}>
-            I STARTED DOING PROGRAMMING WHEN I WAS 15. THEN I WENT WITH THE FLOW
-            NOT KNOWING AI WILL REPLACE MY JOB!
-          </p>
-        </div>
-
-        {/* Center decorative area — replace with an illustration if desired */}
-        <div className={styles.centerDecor} aria-hidden="true" />
-
-        <div className={styles.rightParagraph}>
-          <p className={styles.bodyText}>
-            I just came to know that taking science stream with computer will be
-            good for future. I did not really know what I want to become! As I
-            spent two years in this, I decided to continue. When in college, I
-            did google search about most paying secure dev jobs. Web development
-            was in top 5! Then started with frontend and I liked that frontend
-            is visible. Although I also learned backend as I wanted to build my
-            full stack app.
-          </p>
-        </div>
-      </div>
+    <section className={styles.journeyStartSection}>
+      <Step
+        title={day1Step.title}
+        description={day1Step.description}
+        image={day1Step.image}
+        isReversed={day1Step.isReversed}
+        theme={day1Step.theme}
+      />
     </section>
   );
 }

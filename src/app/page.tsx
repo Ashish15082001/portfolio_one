@@ -13,7 +13,7 @@ export default function Home() {
     <main className="main-container">
       {/* <Welcome /> */}
       {/* <Skills /> */}
-      {/* <JourneyStart /> */}
+      <JourneyStart />
       <Education />
       {/* <Today /> */}
       {/* <Contact />  */}
