@@ -36,13 +36,13 @@
   margin-top: 32px;
 }
 
-.leftDescription {
-  background: var(--gradient-mint);
+.rightDescription {
+  background: var(--gradient-sunset);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-top: 200px;
+  margin-top: 500px;
   max-width: 480px;
   text-transform: capitalize;
 }

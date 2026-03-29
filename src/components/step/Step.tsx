@@ -18,7 +18,8 @@ export interface StepProps {
     | "nordic"
     | "mint"
     | "peach"
-    | "bless";
+    | "bless"
+    | "sunset";
 }
 
 const fadeIn = {

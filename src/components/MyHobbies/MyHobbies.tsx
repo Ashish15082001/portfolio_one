@@ -5,6 +5,7 @@ import Step, { StepProps } from "../step/Step";
 import YoutubeFrame from "../YoutubeFrame/YoutubeFrame";
 import styles from "./MyHobbies.module.css";
 import blender from "@/images/blender.png";
+import cycling from "@/images/cycling.png";
 import twinkle from "@/animations/twinkle.json";
 import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
 import curvedArrow from "@/icons/curved-bottom-left-arrow.svg";
@@ -36,7 +37,7 @@ const HOBBIES: StepProps[] = [
       },
     ],
     image: <Image src={blender} alt="Blender 3D renders" />,
-    isReversed: true,
+    isReversed: false,
     theme: "nordic",
   },
   {
@@ -51,8 +52,9 @@ const HOBBIES: StepProps[] = [
       { text: "I do servicing of my cycle own my own once a week." },
       { text: "I also do ride at night. Saw snakes on road couple of time!" },
     ],
-    image: <YoutubeFrame videoId="x3oOkC0JTcA" caption="50+ km" rotate={-2} />,
-    isReversed: false,
+    // <YoutubeFrame videoId="x3oOkC0JTcA" caption="50+ km" rotate={-2} />,
+    image: <Image src={cycling} alt="Cycling" />,
+    isReversed: true,
     theme: "nordic",
   },
   {
@@ -70,7 +72,7 @@ const HOBBIES: StepProps[] = [
     image: (
       <YoutubeFrame videoId="JDy1CZ-9yEA" caption="Guitar Journey" rotate={2} />
     ),
-    isReversed: true,
+    isReversed: false,
     theme: "nordic",
   },
 ];
