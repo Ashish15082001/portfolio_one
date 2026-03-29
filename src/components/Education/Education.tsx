@@ -5,6 +5,8 @@ import nurseryToClass3Image from "@/images/nursery-to-class3.png";
 import clas4To10 from "@/images/class-4-10.png";
 import class11to12 from "@/images/class-11-12.png";
 import unviversity from "@/images/unviversity.png";
+import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
+import curvedDownArrowSky from "@/icons/curved-down-arrow-sky.svg";
 
 interface FactBadge {
   text: string;
@@ -85,6 +87,23 @@ const EDUCATION: StepProps[] = [
 export default function Education() {
   return (
     <section className={styles.educationSection}>
+      {/* intro */}
+      <section className={styles.introSection}>
+        {/* title */}
+        <div className={styles.headingContainer}>
+          <h2 className={`${styles.heading} title`}>Education</h2>
+        </div>
+
+        {/* description */}
+        <div className={styles.descriptionContainer}>
+          <Image
+            src={curvedDownArrowSky}
+            alt="Curved Down Arrow Sky"
+            className={styles.curvedDownArrowSky}
+          />
+        </div>
+      </section>
+
       {EDUCATION.map((card, i) => (
         <Step
           key={i}

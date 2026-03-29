@@ -1,0 +1,14 @@
+.headingContainer {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 90px;
+}
+
+.descriptionContainer {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  justify-content: center;
+}
