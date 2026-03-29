@@ -51,7 +51,7 @@ const Experience: StepProps[] = [
 
 export default function MyExperience() {
   return (
-    <section className={styles.myExperienceSection}>
+    <section className={styles.experienceSection}>
       {/* intro */}
       <section className={styles.introSection}>
         {/* title */}

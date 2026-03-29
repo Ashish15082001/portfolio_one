@@ -3,6 +3,7 @@ import Step from "../step/Step";
 import styles from "./Today.module.css";
 import Image from "next/image";
 import TodayImage from "@/images/today.png";
+import { SpringAnimation } from "../SpringAnimation/SpringAnimation";
 
 export default function Today() {
   return (
@@ -16,8 +17,12 @@ export default function Today() {
         ]}
         image={<Image src={TodayImage} alt="Today" />}
         isReversed={true}
-        theme="mint"
+        theme="peach"
       />
+
+      <div className={styles.springAnimationContainer}>
+        <SpringAnimation theme="peach" />
+      </div>
     </section>
   );
 }

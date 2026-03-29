@@ -6,6 +6,7 @@ import MyHobbies from "@/components/MyHobbies/MyHobbies";
 import Experience from "@/components/Experience/Experience";
 import Today from "@/components/Today/Today";
 import Contact from "@/components/Contact/Contact";
+import PersonalProjects from "@/components/PersonalProjects/PersonalProjects";
 
 export default function Home() {
   return (
@@ -16,8 +17,10 @@ export default function Home() {
       <Education />
       <MyHobbies />
       <Experience />
+      <PersonalProjects />
       <Today />
-      {/* <Contact />  */}
+
+      {/* <Contact /> */}
     </main>
   );
 }

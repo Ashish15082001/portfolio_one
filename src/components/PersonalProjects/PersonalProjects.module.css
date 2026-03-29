@@ -1,13 +1,15 @@
-.experienceSection {
+.PersonalProjectsSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 64px;
   padding: 80px 40px;
+  /* border: 5px solid red; */
 }
 
 .introSection {
   width: 100%;
+  /* border: 5px solid red; */
 }
 
 .headingContainer {
@@ -36,34 +38,20 @@
   margin-top: 32px;
 }
 
-.rightDescription {
-  background: var(--gradient-sunset);
+.leftDescription {
+  background: var(--gradient-bless);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-top: 500px;
-  max-width: 480px;
+}
+.rightDescription {
+  background: var(--gradient-bless);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   text-transform: capitalize;
-}
-
-.curvedArrow {
-  flex: 1;
-  min-width: 0;
-  max-height: 500px;
-  object-fit: contain;
-}
-
-.videoContainer {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.videoIframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+  text-transform: capitalize;
+  margin-top: 300px;
 }

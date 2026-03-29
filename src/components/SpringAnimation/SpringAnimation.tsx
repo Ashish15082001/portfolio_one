@@ -99,13 +99,42 @@ function buildPath(offsets: readonly number[]): string {
 // Pre-computed outside the component — never regenerated on re-renders.
 const PATHS = OFFSETS.map(buildPath);
 
-export function SpringAnimation() {
+/** Palette themes matching the gradient tokens in globals.css */
+export type SpringTheme =
+  | "sunset"
+  | "grape"
+  | "blueberry"
+  | "sky"
+  | "nordic"
+  | "mint"
+  | "bless"
+  | "peach";
+
+/** [startColor, endColor] — direction is right-to-left to match the -90deg CSS gradients */
+const THEME_COLORS: Record<SpringTheme, [string, string]> = {
+  sunset: ["#ffad60", "#ff5a6b"],
+  grape: ["#8c67f5", "#d094ff"],
+  blueberry: ["#a67eff", "#79baff"],
+  sky: ["#6cbaff", "#d8f4ff"],
+  nordic: ["#9b78ff", "#98ff9a"],
+  mint: ["#9bf7ff", "#9cff85"],
+  bless: ["#b9fd99", "#ffc764"],
+  peach: ["#ffd69a", "#ff8f7f"],
+};
+
+interface SpringAnimationProps {
+  theme?: SpringTheme;
+}
+
+export function SpringAnimation({ theme = "grape" }: SpringAnimationProps) {
   const [frame, setFrame] = useState(0);
+  const [from, to] = THEME_COLORS[theme];
+  const gradientId = `springGrad-${theme}`;
 
   useEffect(() => {
     const id = setInterval(() => {
       setFrame((f) => (f + 1) % PATHS.length);
-    }, 100); // 1000 ms / 100 ms = 20 fps
+    }, 200); // 1000 ms / 200 ms  = 5 frames per second
     return () => clearInterval(id);
   }, []);
 
@@ -121,21 +150,21 @@ export function SpringAnimation() {
       >
         <path
           d={PATHS[frame]}
-          stroke="url(#springGrad)"
+          stroke={`url(#${gradientId})`}
           strokeWidth="3"
           strokeLinecap="round"
         />
         <defs>
           <linearGradient
-            id="springGrad"
+            id={gradientId}
             x1="638.994"
             y1="69.9386"
             x2="1.5"
             y2="69.9386"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#DBA6F4" />
-            <stop offset="1" stopColor="#A981FE" />
+            <stop stopColor={from} />
+            <stop offset="1" stopColor={to} />
           </linearGradient>
         </defs>
       </svg>
