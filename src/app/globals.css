@@ -26,6 +26,43 @@
 
   --color-tag-border: #dba6f4;
 
+  /* Typography scale tokens (from your image mapping) */
+  --font-huge-headline: var(--font-space-mono), monospace;
+  --font-big-title: var(--font-space-mono), monospace;
+  --font-title: var(--font-space-mono), monospace;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-caption: var(--font-dm-sans), sans-serif;
+  --font-quote: "Nanum Pen", cursive;
+  --font-button: var(--font-dm-sans), sans-serif;
+
+  --size-huge-headline: 96px;
+  --line-huge-headline: 128px;
+  --weight-huge-headline: 700;
+
+  --size-big-title: 78px;
+  --line-big-title: 96px;
+  --weight-big-title: 700;
+
+  --size-title: 48px;
+  --line-title: 64px;
+  --weight-title: 700;
+
+  --size-body: 32px;
+  --line-body: 48px;
+  --weight-body: 500;
+
+  --size-caption: 18px;
+  --line-caption: 32px;
+  --weight-caption: 400;
+
+  --size-quote: 40px;
+  --line-quote: 40px;
+  --weight-quote: 400;
+
+  --size-button: 24px;
+  --line-button: 32px;
+  --weight-button: 700;
+
   --font-heading: var(--font-space-mono), monospace;
   --font-body: var(--font-dm-sans), sans-serif;
 }
@@ -54,6 +91,69 @@
 }
 .bg-peach {
   background: var(--gradient-peach);
+}
+
+/* Typography utilities */
+.huge-headline,
+.big-title,
+.title,
+.body-text,
+.caption,
+.quote-text,
+.button-text {
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text);
+}
+
+.huge-headline {
+  font-family: var(--font-huge-headline);
+  font-size: var(--size-huge-headline);
+  line-height: var(--line-huge-headline);
+  font-weight: var(--weight-huge-headline);
+}
+
+.big-title {
+  font-family: var(--font-big-title);
+  font-size: var(--size-big-title);
+  line-height: var(--line-big-title);
+  font-weight: var(--weight-big-title);
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: var(--size-title);
+  line-height: var(--line-title);
+  font-weight: var(--weight-title);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--line-body);
+  font-weight: var(--weight-body);
+}
+
+.caption {
+  font-family: var(--font-caption);
+  font-size: var(--size-caption);
+  line-height: var(--line-caption);
+  font-weight: var(--weight-caption);
+}
+
+.quote-text {
+  font-family: var(--font-quote);
+  font-size: var(--size-quote);
+  line-height: var(--line-quote);
+  font-weight: var(--weight-quote);
+}
+
+.button-text {
+  font-family: var(--font-button);
+  font-size: var(--size-button);
+  line-height: var(--line-button);
+  font-weight: var(--weight-button);
 }
 
 .text-sunset {
