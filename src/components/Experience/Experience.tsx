@@ -40,6 +40,12 @@ const Experience: StepProps[] = [
     image: <Image src={appShowcase} alt="App Showcase" />,
     isReversed: false,
     theme: "sunset",
+    links: [
+      {
+        text: "Developer Website",
+        url: "https://netpractice.app/",
+      },
+    ],
   },
 ];
 
@@ -90,6 +96,7 @@ export default function MyExperience() {
           highlights={hobby.highlights}
           isReversed={hobby.isReversed}
           theme={hobby.theme}
+          links={hobby.links}
         />
       ))}
 

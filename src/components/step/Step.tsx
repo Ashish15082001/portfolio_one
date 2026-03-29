@@ -10,6 +10,7 @@ export interface StepProps {
   isReversed?: boolean;
 
   highlights?: { text: string }[];
+  links?: { text: string; url: string }[];
   theme:
     | "suset"
     | "grape"
@@ -42,6 +43,7 @@ export default function Step({
   image,
   isReversed,
   highlights,
+  links,
   theme,
 }: StepProps) {
   return (
@@ -126,6 +128,30 @@ export default function Step({
               </div>
             ))}
           </motion.div>
+        )}
+
+        {/* links */}
+        {links && links.length > 0 && (
+          <motion.ul
+            className={styles.links}
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
+            {links.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.link} body-text`}
+                >
+                  {link.text}
+                </a>
+              </li>
+            ))}
+          </motion.ul>
         )}
       </div>
     </div>

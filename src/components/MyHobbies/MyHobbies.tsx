@@ -56,6 +56,12 @@ const HOBBIES: StepProps[] = [
     image: <Image src={cycling} alt="Cycling" />,
     isReversed: true,
     theme: "nordic",
+    links: [
+      {
+        text: "Strava Profile",
+        url: "https://www.strava.com/athletes/142738329",
+      },
+    ],
   },
   {
     title: "Guitar",
@@ -74,6 +80,12 @@ const HOBBIES: StepProps[] = [
     ),
     isReversed: false,
     theme: "nordic",
+    links: [
+      {
+        text: "Guitar Link",
+        url: "https://www.johnsmusic.in/products/kepma-edc-e-semi-acoustic-guitar-natural",
+      },
+    ],
   },
 ];
 
@@ -126,6 +138,7 @@ export default function MyHobbies() {
           highlights={hobby.highlights}
           isReversed={hobby.isReversed}
           theme={hobby.theme}
+          links={hobby.links}
         />
       ))}
     </section>

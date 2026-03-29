@@ -52,6 +52,33 @@
   text-align: center;
 }
 
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  width: fit-content;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
 /* Responsive styles */
 @media (max-width: 1024px) {
   .step {
@@ -106,6 +133,94 @@
   .highlight {
     padding: 15px;
   }
+}
+
+.step-theme-sunset .link {
+  background: var(--gradient-sunset);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-sunset .link::after {
+  background: var(--gradient-sunset);
+}
+
+.step-theme-grape .link {
+  background: var(--gradient-grape);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-grape .link::after {
+  background: var(--gradient-grape);
+}
+
+.step-theme-blueberry .link {
+  background: var(--gradient-blueberry);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-blueberry .link::after {
+  background: var(--gradient-blueberry);
+}
+
+.step-theme-sky .link {
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-sky .link::after {
+  background: var(--gradient-sky);
+}
+
+.step-theme-nordic .link {
+  background: var(--gradient-nordic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-nordic .link::after {
+  background: var(--gradient-nordic);
+}
+
+.step-theme-mint .link {
+  background: var(--gradient-mint);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-mint .link::after {
+  background: var(--gradient-mint);
+}
+
+.step-theme-bless .link {
+  background: var(--gradient-bless);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-bless .link::after {
+  background: var(--gradient-bless);
+}
+
+.step-theme-peach .link {
+  background: var(--gradient-peach);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.step-theme-peach .link::after {
+  background: var(--gradient-peach);
 }
 
 .step-theme-sunset .title,
