@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Step, { StepProps } from "../step/Step";
+import YoutubeFrame from "../YoutubeFrame/YoutubeFrame";
 import styles from "./Hobbies.module.css";
 import blender from "@/images/blender.png";
-import cycling from "@/images/cycling.png";
 import guitar from "@/images/guitar.png";
 
 const HOBBIES: StepProps[] = [
@@ -34,7 +34,7 @@ const HOBBIES: StepProps[] = [
       { text: "I do servicing of my cycle own my own once a week." },
       { text: "I also do ride at night. Saw snakes on road couple of time!" },
     ],
-    image: <Image src={cycling} alt="Cycling adventures" />,
+    image: <YoutubeFrame videoId="x3oOkC0JTcA" caption="50+ km" rotate={-2} />,
     isReversed: false,
     theme: "mint",
   },

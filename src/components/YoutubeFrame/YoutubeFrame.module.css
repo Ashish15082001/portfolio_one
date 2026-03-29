@@ -1,0 +1,51 @@
+.polaroid {
+  background: #fff;
+  padding: 8px;
+  box-shadow: 4px 6px 32px rgba(0, 0, 0, 0.45);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.03) !important;
+  box-shadow: 6px 10px 48px rgba(0, 0, 0, 0.6);
+}
+
+.videoWrapper {
+  width: 260px;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.caption {
+  margin-top: 12px;
+  font-family: "Caveat", "Patrick Hand", cursive;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .videoWrapper {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoWrapper {
+    width: 160px;
+  }
+}
