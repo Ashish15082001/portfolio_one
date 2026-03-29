@@ -49,7 +49,9 @@ const HOBBIES: StepProps[] = [
       { text: "Next will be either piano or violin!" },
       { text: "I will start singing too." },
     ],
-    image: <YoutubeFrame videoId="JDy1CZ-9yEA" caption="Guitar Journey" rotate={2} />,
+    image: (
+      <YoutubeFrame videoId="JDy1CZ-9yEA" caption="Guitar Journey" rotate={2} />
+    ),
     isReversed: true,
     theme: "grape",
   },

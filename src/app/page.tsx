@@ -14,7 +14,7 @@ export default function Home() {
       <JourneyStart />
       <Education />
       <Hobbies />
-      {/* <Today /> */}
+      <Today />
       {/* <Contact />  */}
     </main>
   );
