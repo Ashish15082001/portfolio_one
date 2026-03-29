@@ -32,7 +32,7 @@ const fadeIn = {
   },
 };
 
-const viewport = { once: false, amount: 0.6 };
+const viewport = { once: false, amount: 0.4 };
 
 export default function Step({
   title,
