@@ -1,0 +1,57 @@
+.step {
+  display: flex;
+  padding: 80px;
+  gap: 40px;
+  align-items: center;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+.imageContent > img {
+  height: auto;
+}
+
+.textContent {
+  max-width: 40%;
+}
+
+.title {
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 8px;
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  margin-top: 48px;
+}
+
+.highlights {
+  display: flex;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.highlight {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-gray);
+  width: 50%;
+  height: fit-content;
+}
+
+.highlight p {
+  text-align: center;
+}

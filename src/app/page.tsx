@@ -2,20 +2,21 @@ import Welcome from "@/components/Welcome/Welcome";
 import Skills from "@/components/Skills/Skills";
 import JourneyStart from "@/components/JourneyStart/JourneyStart";
 import Education from "@/components/Education/Education";
-import Experience from "@/components/Experience/Experience";
 import Today from "@/components/Today/Today";
 import Contact from "@/components/Contact/Contact";
+import Step from "@/components/step/Step";
+import nurseryToClass3Image from "@/images/nursery-to-class3.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      <Welcome />
-      <Skills />
-      <JourneyStart />
+    <main className="main-container">
+      {/* <Welcome /> */}
+      {/* <Skills /> */}
+      {/* <JourneyStart /> */}
       <Education />
-      <Experience />
-      <Today />
-      <Contact />
+      {/* <Today /> */}
+      {/* <Contact />  */}
     </main>
   );
 }
