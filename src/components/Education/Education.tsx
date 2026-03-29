@@ -4,6 +4,7 @@ import styles from "./Education.module.css";
 import nurseryToClass3Image from "@/images/nursery-to-class3.png";
 import clas4To10 from "@/images/class-4-10.png";
 import class11to12 from "@/images/class-11-12.png";
+import unviversity from "@/images/unviversity.png";
 
 interface FactBadge {
   text: string;
@@ -60,6 +61,23 @@ const EDUCATION: StepProps[] = [
     ],
     image: <Image src={class11to12} alt="Class 11 to 12" />,
     isReversed: false,
+    theme: "sky",
+  },
+  {
+    title: "Bachelors in Technology (Computer Science)",
+    subtitle: "Lovely Professional University (Punjab)",
+    description: [
+      "After 12th i did google search and used local newspaper for choosing right college.",
+      "Scored 80+ in 12th board and also cleared entrance exam conducted by university securing 40% scholarship!",
+      "After joining i have Nothing much to say, Totally disappointed.",
+      "If i can learn something i want to for free then why university? just to burn hard earned money!. If i get a chance to go back in past i would not even join any college.",
+    ],
+    highlights: [
+      { text: "Dropped out in 3rd  year!" },
+      { text: "Best decision of my life" },
+    ],
+    image: <Image src={unviversity} alt="Bachelors in Technology" />,
+    isReversed: true,
     theme: "sky",
   },
 ];
