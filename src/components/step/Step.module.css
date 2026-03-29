@@ -44,6 +44,10 @@
   height: fit-content;
 }
 
+.highlight:only-child {
+  width: 100%;
+}
+
 .highlight p {
   text-align: center;
 }
