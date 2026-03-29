@@ -23,8 +23,12 @@
   margin-top: 8px;
 }
 
-.description {
+.descriptionContainer {
   margin-top: 48px;
+}
+
+.descriptionText {
+  margin-top: 24px;
 }
 
 .highlights {

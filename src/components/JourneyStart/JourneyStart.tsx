@@ -5,9 +5,10 @@ import Day1Image from "@/images/day-1.png";
 
 const day1Step: StepProps = {
   title: "Day 1",
-  description: `I was born in Uttarakhand. I was first child of my parents and first grand child of my grand parents.
-
-              My mother says i was very quiet and rarely cried. At age of 3, i joined school.`,
+  description: [
+    "I was born in Uttarakhand. I was first child of my parents and first grand child of my grand parents.",
+    "My mother says i was very quiet and rarely cried. At age of 3, i joined school.",
+  ],
   image: <Image src={Day1Image} alt="Day 1" className={styles.stepImage} />,
   isReversed: true,
   theme: "sky",

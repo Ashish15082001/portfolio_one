@@ -5,7 +5,7 @@ import styles from "./Step.module.css";
 export interface StepProps {
   title: string;
   subtitle?: string;
-  description: string;
+  description: string[];
   image: React.ReactNode;
   isReversed?: boolean;
 
@@ -23,10 +23,16 @@ export interface StepProps {
 
 const fadeIn = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
+  },
 };
 
-const viewport = { once: true, amount: 0.5 };
+const viewport = { once: false, amount: 0.6 };
 
 export default function Step({
   title,
@@ -49,6 +55,17 @@ export default function Step({
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
+        animate={{
+          y: [0, -18, 0],
+        }}
+        transition={{
+          y: {
+            duration: 4,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "loop",
+          },
+        }}
       >
         {image}
       </motion.div>
@@ -77,16 +94,21 @@ export default function Step({
           {subtitle}
         </motion.p>
 
-        {/* description */}
-        <motion.p
-          className={`${styles.description} body-text`}
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewport}
-        >
-          {description}
-        </motion.p>
+        <div className={styles.descriptionContainer}>
+          {/* description */}
+          {description.map((desc, index) => (
+            <motion.p
+              key={index}
+              className={`${styles.descriptionText} body-text`}
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+            >
+              {desc}
+            </motion.p>
+          ))}
+        </div>
 
         {/* highlights */}
         {highlights && (
