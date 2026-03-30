@@ -62,7 +62,7 @@ export default function MyExperience() {
           whileInView="visible"
           viewport={viewport}
         >
-          <h2 className={`${styles.heading} title`}>My Experience</h2>
+          <h2 className={`${styles.heading} title`}>Experience</h2>
           <LottieAnimation animationData={twinkle} className={styles.twinkle} />
         </motion.div>
 

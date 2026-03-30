@@ -1,6 +1,6 @@
 .step {
   display: flex;
-  padding: 80px;
+  padding: 80px 0;
   gap: 40px;
 }
 
