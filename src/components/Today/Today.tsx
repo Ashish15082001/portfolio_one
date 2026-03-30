@@ -11,9 +11,9 @@ export default function Today() {
       <Step
         title="Today"
         description={[
-          "I am still working for same company as a Frontend Developer.",
-          "Started focusing on Web Security, Optimization, System Design and Animations.",
-          "I will keep learning music as i want become professional in this field. I just need to make one hit song and life set. I will retire and start farming.",
+          "I’m still working at the same company as a Frontend Developer.",
+          "Currently, I’m focusing on Web Security, Optimization, System Design, and Animations.",
+          "I’m also continuing to learn music, as I want to become a professional in this field. I just need to make one hit song—then life is set! I’ll retire and start farming. 😄",
         ]}
         image={<Image src={TodayImage} alt="Today" />}
         isReversed={true}

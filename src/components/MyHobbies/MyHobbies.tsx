@@ -26,14 +26,14 @@ const viewport = { once: false, amount: 0.4 };
 const HOBBIES: StepProps[] = [
   {
     title: "Blender",
-    subtitle: "during covid",
+    subtitle: "During COVID",
     description: [
-      "I had interesting game development and i got to know that we need 3d models likes characters and other assets.",
-      "So, I decided to learn this using blender. With the help of YouTube, I learned basics in one week..",
+      "I became interested in game development and learned that it requires 3D models like characters and other assets.",
+      "So, I decided to learn Blender. With the help of YouTube, I picked up the basics within a week.",
     ],
     highlights: [
       {
-        text: "I discontinued learning blender as rendering single image took more than 20 minutes!",
+        text: "I stopped learning Blender because rendering even a single image took more than 20 minutes!",
       },
     ],
     image: <Image src={blender} alt="Blender 3D renders" />,
@@ -42,17 +42,18 @@ const HOBBIES: StepProps[] = [
   },
   {
     title: "Cycling",
-    subtitle: "50km per week",
+    subtitle: "50 km per week",
     description: [
-      "I has dream from childhood of having a gear cycle. I gifted myself a cycle and started cycling.",
-      "I think this is good for health to go out cycling at least 3 ties a week.",
-      "Longest i did is 65km, Nepal!",
+      "I had a childhood dream of owning a geared cycle. Eventually, I gifted myself one and started cycling regularly.",
+      "I believe cycling is great for health—I try to go out at least three times a week.",
+      "My longest ride so far is 65 km, including a ride to Nepal!",
     ],
     highlights: [
-      { text: "I do servicing of my cycle own my own once a week." },
-      { text: "I also do ride at night. Saw snakes on road couple of time!" },
+      { text: "I service my cycle on my own once a week." },
+      {
+        text: "I also ride at night—have spotted snakes on the road a couple of times!",
+      },
     ],
-    // <YoutubeFrame videoId="x3oOkC0JTcA" caption="50+ km" rotate={-2} />,
     image: <Image src={cycling} alt="Cycling" />,
     isReversed: true,
     theme: "nordic",
@@ -65,15 +66,15 @@ const HOBBIES: StepProps[] = [
   },
   {
     title: "Guitar",
-    subtitle: "want to be professional",
+    subtitle: "Aspiring to go professional",
     description: [
-      "One day i went to my cousin brother's house. There i saw a guitar gifted to my cousin sister.",
-      "I tried playing it and found extremely difficult. That day i decided to ave my own guitar and start learning.",
-      "First i bought cheap guitar to check if i can play. I gifted myself new little expensive guitar last year on my birthday. I have reached intermediate level now.",
+      "One day, I visited my cousin’s house and saw a guitar that had been gifted to my cousin sister.",
+      "I tried playing it and found it extremely difficult. That day, I decided to get my own guitar and start learning.",
+      "At first, I bought a cheap guitar to see if I could stick with it. Last year, I gifted myself a slightly more expensive one for my birthday. Now, I’ve reached an intermediate level.",
     ],
     highlights: [
-      { text: "Next will be either piano or violin!" },
-      { text: "I will start singing too." },
+      { text: "Next, I might learn piano or violin!" },
+      { text: "I also plan to start singing." },
     ],
     image: (
       <YoutubeFrame videoId="JDy1CZ-9yEA" caption="Guitar Journey" rotate={2} />
@@ -115,9 +116,9 @@ export default function MyHobbies() {
             whileInView="visible"
             viewport={viewport}
           >
-            I HAVE SOME INTERESTS OTHER THAN CODING LIKE LEARNING HOW MODELS ARE
-            MADE USING BLENDER, LEARNING MUSIC THEORY, PLAYING GUITAR, CYCLING,
-            PLAYING VIDEO GAMES ETC.
+            I have interests beyond coding, such as learning how 3D models are
+            created using Blender, studying music theory, playing the guitar,
+            cycling, and playing video games.
           </motion.p>
 
           <Image

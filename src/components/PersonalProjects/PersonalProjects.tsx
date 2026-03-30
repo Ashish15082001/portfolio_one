@@ -23,11 +23,11 @@ const viewport = { once: false, amount: 0.4 };
 
 const personalProject: StepProps = {
   title: "Review Destination",
-  subtitle: "Social media app",
+  subtitle: "Social Media App",
   description: [
-    "I started learning NextJS this year. I decided to make full stack web app using this. ",
-    "Currently i am developing social media app for travelers all around the world!",
-    "I have also developed my own authentication system.",
+    "I started learning Next.js this year and decided to build a full-stack web application using it.",
+    "Currently, I’m developing a social media platform for travelers around the world.",
+    "I have also built a custom authentication system from scratch.",
   ],
   image: (
     <Image
@@ -67,8 +67,8 @@ export default function PersonalProjects() {
             whileInView="visible"
             viewport={viewport}
           >
-            I have developed more than 10 personal projects. But only two
-            projects are live and only one is running right now!.
+            I’ve built more than 10 personal projects, but only two have been
+            deployed—and currently, only one is actively running.
           </motion.p>
 
           <Image
@@ -85,9 +85,9 @@ export default function PersonalProjects() {
             whileInView="visible"
             viewport={viewport}
           >
-            In the era of AI, I am also exploring how to use AI in my projects.
-            My focus is on building AI powered apps that can help people in
-            their daily lives.
+            In the era of AI, I’m actively exploring how to integrate it into my
+            projects. My focus is on building AI-powered applications that can
+            genuinely help people in their daily lives.
           </motion.p>
         </div>
       </section>

@@ -44,7 +44,7 @@
   color: transparent;
   margin-top: 500px;
   max-width: 480px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .curvedArrow {

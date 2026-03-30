@@ -44,9 +44,10 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  text-transform: capitalize;
   margin-top: 300px;
+  text-transform: uppercase;
 }
+
 .rightDescription {
   background: var(--gradient-sky);
   -webkit-background-clip: text;

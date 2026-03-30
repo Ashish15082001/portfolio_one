@@ -24,17 +24,17 @@ const viewport = { once: false, amount: 0.4 };
 const Experience: StepProps[] = [
   {
     title: "Smilebots",
-    subtitle: "September 2022 - present",
+    subtitle: "September 2022 - Present",
     description: [
-      "I started working on a product called Netpractice which was not even started when i joined.",
-      "Did research on whether to use React Native or Capacitor. Initially i also developed some ui components using Figma.",
-      "Currently we have  250K+ downloads. Our goal is to make student practice using our app for any exams they are preparing using out Neo Ai Coach!",
-      "Users can play lives matches with there friends too.",
-      "I designed and developed core architecture of all features in a app in terms of frontend.",
+      "I joined Smilebots as a Junior Frontend Developer and started working on a product called Netpractice, which was still in its early stages at the time.",
+      "I researched whether to use React Native or Capacitor and also contributed to initial UI components using Figma.",
+      "Today, the app has grown to 250K+ downloads. Our goal is to help students practice effectively for any exam using our Neo AI Coach.",
+      "Users can also play live matches with their friends, making learning more interactive.",
+      "I designed and developed the core frontend architecture for most of the app’s features.",
     ],
     highlights: [
       {
-        text: "I discontinued learning blender as rendering single image took more than 20 minutes!",
+        text: "Contributed from the very early stage of the product to scaling it to 250K+ users.",
       },
     ],
     image: <Image src={appShowcase} alt="App Showcase" />,
@@ -81,7 +81,7 @@ export default function MyExperience() {
             whileInView="visible"
             viewport={viewport}
           >
-            I got my first job at Smilebots as a junior frontend developer!
+            I landed my first job as a Junior Frontend Developer at Smilebots!
           </motion.p>
         </div>
       </section>

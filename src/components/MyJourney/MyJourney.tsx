@@ -24,8 +24,8 @@ const viewport = { once: false, amount: 0.4 };
 const day1Step: StepProps = {
   title: "Day 1",
   description: [
-    "I was born in Uttarakhand. I was first child of my parents and first grand child of my grand parents.",
-    "My mother says i was very quiet and rarely cried. At age of 3, i joined school.",
+    "I was born in Uttarakhand. I am the first child of my parents and the first grandchild in my family.",
+    "My mother says I was very quiet and rarely cried. I started school at the age of 3.",
   ],
   image: <Image src={Day1Image} alt="Day 1" className={styles.stepImage} />,
   isReversed: true,
@@ -59,8 +59,8 @@ export default function MyJourney() {
             whileInView="visible"
             viewport={viewport}
           >
-            I STARTED DOING PROGRAMMING WHEN I WAS 15. THEN I WENT WITH THE FLOW
-            NOT KNOWING AI WILL REPLACE MY JOB!
+            I started programming when I was 15, just going with the flow—never
+            imagining that AI might one day replace my job!
           </motion.p>
 
           <Image
@@ -77,13 +77,14 @@ export default function MyJourney() {
             whileInView="visible"
             viewport={viewport}
           >
-            I just came to know that taking science stream with computer will be
-            good for future. I did not really know what i want to become! As i
-            spent two years in this, I decided to continue. When in college, I
-            did google search about most paying secure dev jobs. Web development
-            was in top 5! Then started with frontend and i liked that frontend
-            is visible. Although i also learned backend as i wanted to build my
-            full stack app.
+            I later found out that choosing the science stream with computers
+            would be good for my future. At that time, I didn’t really know what
+            I wanted to become. After spending two years in it, I decided to
+            continue. In college, I searched on Google for the highest-paying
+            and most secure developer jobs—web development was in the top five!
+            So I started with frontend development and loved how instantly
+            visible the results are. Eventually, I also learned backend because
+            I wanted to build full-stack applications.
           </motion.p>
         </div>
       </section>

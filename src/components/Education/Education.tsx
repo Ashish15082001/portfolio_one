@@ -12,15 +12,15 @@ import twinkle from "@/animations/twinkle.json";
 const EDUCATION: StepProps[] = [
   {
     title: "Nursery to Class 3",
-    subtitle: "Kendriya Vidyalaya (NHPC Banabasa)",
+    subtitle: "Kendriya Vidyalaya (NHPC Banbasa)",
     description: [
-      "This is where I started studying. I have lots of memories there.",
-      "I am still in contact with some friends as they live in the same place as me. Unfortunately, the majority of my friends are out of contact and many do not remember me. Even my best friend said he does not remember me!",
+      "This is where I started my schooling, and I have lots of memories from that time.",
+      "I’m still in touch with a few friends since they live near me. Unfortunately, I’ve lost contact with most of them, and many don’t even remember me now—even my best friend once said he doesn’t remember me!",
     ],
     highlights: [
-      { text: "I was very good in drawing." },
+      { text: "I was very good at drawing." },
       {
-        text: "I was also very good at studies. Because of this I did not study in LKG. I directly went to UKG!",
+        text: "I was also strong in academics. Because of this, I skipped LKG and went directly to UKG!",
       },
     ],
     image: <Image src={nurseryToClass3Image} alt="Nursery to Class 3" />,
@@ -28,22 +28,22 @@ const EDUCATION: StepProps[] = [
     theme: "sky",
     links: [
       {
-        text: "music used in dance performance",
+        text: "Music used in dance performance",
         url: "https://www.youtube.com/watch?v=9UzvpM3IwwY",
       },
     ],
   },
   {
     title: "Class 4 to 10",
-    subtitle: "St Francis Senior Secondary School (Tanakpur)",
+    subtitle: "St. Francis Senior Secondary School (Tanakpur)",
     description: [
-      "This is where both of my chachu (my father's brothers) studied.",
-      "I do not have much to say about this. Here I became an average student.",
-      "I had some not-so-great teachers.",
+      "This is where both of my uncles (my father’s brothers) studied.",
+      "I don’t have much to say about this phase—this is where I became an average student.",
+      "I also had some not-so-great teachers.",
     ],
     highlights: [
-      { text: "I was known to be a very funny guy here." },
-      { text: "I was famous as a good artist!" },
+      { text: "I was known as a very funny guy here." },
+      { text: "I was also quite popular as a good artist!" },
     ],
     image: <Image src={clas4To10} alt="Class 4 to 10" />,
     isReversed: true,
@@ -53,15 +53,15 @@ const EDUCATION: StepProps[] = [
     title: "Class 11 to 12",
     subtitle: "Nosegay Public School (Khatima)",
     description: [
-      "Here my personality was completely different. I was known to be sincere and rarely talked.",
-      "Even teachers had blind faith in me. They would never believe that I would do anything bad.",
-      "I was once absent and the physics teacher did not teach anyone that day. He said that he teaches only for me as others used to go to him for tuition.",
-      "I scored the highest in physics — 95% in 12th board exams.",
+      "During this time, my personality changed a lot. I became more sincere and rarely spoke.",
+      "Even teachers had complete trust in me—they would never believe I could do anything wrong.",
+      "Once, when I was absent, my physics teacher didn’t teach the class. He said he teaches only for me, as others usually attended his tuition anyway.",
+      "I scored the highest in physics—95% in my 12th board exams.",
     ],
     highlights: [
-      { text: "I was loved by all here." },
+      { text: "I was loved by everyone here." },
       {
-        text: "I would like to go back to the past just to experience this again.",
+        text: "I sometimes wish I could go back and experience this phase again.",
       },
     ],
     image: <Image src={class11to12} alt="Class 11 to 12" />,
@@ -72,14 +72,14 @@ const EDUCATION: StepProps[] = [
     title: "Bachelors in Technology (Computer Science)",
     subtitle: "Lovely Professional University (Punjab)",
     description: [
-      "After 12th i did google search and used local newspaper for choosing right college.",
-      "Scored 80+ in 12th board and also cleared entrance exam conducted by university securing 40% scholarship!",
-      "After joining i have Nothing much to say, Totally disappointed.",
-      "If i can learn something i want to for free then why university? just to burn hard earned money!. If i get a chance to go back in past i would not even join any college.",
+      "After 12th, I searched online and checked local newspapers to choose the right college.",
+      "I scored 80+ in my 12th boards and also cleared the university’s entrance exam, securing a 40% scholarship.",
+      "After joining, I honestly didn’t find it valuable—I was quite disappointed.",
+      "If I can learn what I want for free, why go to a university just to spend hard-earned money? If I could go back, I wouldn’t join any college.",
     ],
     highlights: [
-      { text: "Dropped out in 3rd  year!" },
-      { text: "Best decision of my life" },
+      { text: "Dropped out in the 3rd year!" },
+      { text: "Best decision of my life." },
     ],
     image: <Image src={unviversity} alt="Bachelors in Technology" />,
     isReversed: true,
