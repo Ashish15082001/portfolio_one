@@ -12,3 +12,10 @@
   margin-top: 32px;
   justify-content: center;
 }
+
+.twinkle {
+  position: absolute;
+  bottom: 30%;
+  right: -10px;
+  height: 100px;
+}

@@ -6,10 +6,8 @@ import clas4To10 from "@/images/class-4-10.png";
 import class11to12 from "@/images/class-11-12.png";
 import unviversity from "@/images/unviversity.png";
 import curvedDownArrowSky from "@/icons/curved-down-arrow-sky.svg";
-
-interface FactBadge {
-  text: string;
-}
+import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
+import twinkle from "@/animations/twinkle.json";
 
 const EDUCATION: StepProps[] = [
   {
@@ -96,7 +94,8 @@ export default function Education() {
       <section className={styles.introSection}>
         {/* title */}
         <div className={styles.headingContainer}>
-          <h2 className={`${styles.heading} title`}>Education</h2>
+          <h2 className={`${styles.heading} title`}>Education</h2>{" "}
+          <LottieAnimation animationData={twinkle} className={styles.twinkle} />
         </div>
 
         {/* description */}

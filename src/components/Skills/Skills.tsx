@@ -4,9 +4,64 @@ import { motion, type Variants } from "motion/react";
 import styles from "./Skills.module.css";
 
 const SKILL_ROWS = [
-  ["HTML & CSS", "Javascript", "TypeScript", "React", "NextJS"],
-  ["NodeJs", "ExpressJS", "Product Design", "Android Development"],
-  ["Web Development", "IOS Development", "Guitar", "Cooking"],
+  {
+    skill: "HTML5",
+    experience: "4 years",
+  },
+  {
+    skill: "CSS3",
+    experience: "4 years",
+  },
+  {
+    skill: "Javascript",
+    experience: "4 years",
+  },
+  {
+    skill: "TypeScript",
+    experience: "3 years",
+  },
+  {
+    skill: "React",
+    experience: "4 years",
+  },
+  {
+    skill: "NextJS",
+    experience: "2 years",
+  },
+
+  {
+    skill: "NodeJs",
+    experience: "1 year",
+  },
+  {
+    skill: "ExpressJS",
+    experience: "1 year",
+  },
+  {
+    skill: "Product Design",
+    experience: "1 year",
+  },
+
+  {
+    skill: "Web Development",
+    experience: "4 years",
+  },
+  {
+    skill: "Android Development",
+    experience: "3 years",
+  },
+  {
+    skill: "IOS Development",
+    experience: "1 year",
+  },
+  {
+    skill: "Guitar",
+    experience: "1 year",
+  },
+  {
+    skill: "Cooking",
+    experience: "1 year",
+  },
 ];
 
 const containerVariants: Variants = {
@@ -59,16 +114,22 @@ function getRotationForLabel(label: string) {
   return (band === 0 ? -1 : 1) * val;
 }
 
-function Tag({ label }: { label: string }) {
-  const rotation = getRotationForLabel(label);
+function SkillTag({
+  skill,
+  experience,
+}: {
+  skill: string;
+  experience: string;
+}) {
+  const rotation = getRotationForLabel(skill);
   return (
     <motion.div
       className={styles.tag}
       variants={tagVariants}
       style={{ rotate: rotation }}
     >
-      <span className={styles.tagText}>{label}</span>
-      <span className={styles.experienceText}>4 years</span>
+      <span className={styles.tagText}>{skill}</span>
+      <span className={styles.experienceText}>{experience}</span>
     </motion.div>
   );
 }
@@ -84,12 +145,12 @@ export default function Skills() {
     >
       <h2 className={`${styles.heading} title`}>Skills</h2>
       <div className={styles.tagGrid}>
-        {SKILL_ROWS.map((row, ri) => (
-          <motion.div key={ri} className={styles.tagRow} variants={rowVariants}>
-            {row.map((skill) => (
-              <Tag key={skill} label={skill} />
-            ))}
-          </motion.div>
+        {SKILL_ROWS.map((skill) => (
+          <SkillTag
+            key={skill.skill}
+            skill={skill.skill}
+            experience={skill.experience}
+          />
         ))}
       </div>
       <div className={styles.squiggleWrapper}>
