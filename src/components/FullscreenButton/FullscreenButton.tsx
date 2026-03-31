@@ -49,7 +49,7 @@ export default function FullscreenButton() {
               <path d="M3 17v4h4" />
               <path d="M21 17v4h-4" />
             </svg> */}
-            <span>Click me if your name is not in Epstein Files!</span>
+            <span>Click me for Better Experience</span>
           </div>
         </div>
       )}
