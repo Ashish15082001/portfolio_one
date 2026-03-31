@@ -29,7 +29,8 @@ const itemVariants: Variants = {
   },
 };
 
-const RESUME = "https://drive.google.com/file/d/1NDPdVNhBfHQulIf4B5vZup6Y2xYkDhJC/view?usp=sharing";
+const RESUME =
+  "https://drive.google.com/file/d/1NDPdVNhBfHQulIf4B5vZup6Y2xYkDhJC/view?usp=sharing";
 
 const LINKS = [
   {

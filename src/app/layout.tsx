@@ -3,6 +3,7 @@ import "./globals.css";
 import { publicSans } from "@/fonts/fonts";
 import FullscreenButton from "@/components/FullscreenButton/FullscreenButton";
 import { ScrollbarThemer } from "@/components/ScrollbarThemer/ScrollbarThemer";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
         {children}
         <FullscreenButton />
         <ScrollbarThemer />
+        <Analytics />
       </body>
     </html>
   );
