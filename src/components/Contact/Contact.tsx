@@ -30,7 +30,7 @@ const itemVariants: Variants = {
 };
 
 const RESUME =
-  "https://drive.google.com/file/d/1NDPdVNhBfHQulIf4B5vZup6Y2xYkDhJC/view?usp=sharing";
+  "https://drive.google.com/file/d/1bAQWF1W9JRrA0CNLDfKuU4npXatSuWPc/view?usp=sharing";
 
 const LINKS = [
   {
