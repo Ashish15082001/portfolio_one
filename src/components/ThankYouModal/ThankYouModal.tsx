@@ -10,12 +10,22 @@ interface Props {
 
 export default function ThankYouModal({ onClose }: Props) {
   const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [feedback, setFeedback] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit() {
+  async function handleSubmit() {
     if (!name.trim()) return;
+    setLoading(true);
+    await fetch("/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, company, feedback }),
+    });
+    setLoading(false);
     setSubmitted(true);
-    setTimeout(onClose, 2200);
+    setTimeout(onClose, 2800);
   }
 
   return (
@@ -43,7 +53,9 @@ export default function ThankYouModal({ onClose }: Props) {
             <>
               <h2 className={styles.heading}>You&apos;re awesome! 🎉</h2>
               <p className={styles.successText}>
-                Thanks for stopping by, <strong>{name}</strong>. I appreciate it — catch you around!
+                Thanks for stopping by, <strong>{name}</strong>
+                {company ? ` from ${company}` : ""}.{" "}
+                {feedback ? "Your feedback means a lot — " : ""}I appreciate it — catch you around!
               </p>
             </>
           ) : (
@@ -54,17 +66,40 @@ export default function ThankYouModal({ onClose }: Props) {
               </p>
 
               <div className={styles.inputGroup}>
-                <input
-                  className={styles.input}
-                  type="text"
-                  placeholder="Your name or company"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-                  autoFocus
-                />
-                <button className={styles.submitBtn} onClick={handleSubmit}>
-                  Say hello 👋
+                <div className={styles.row}>
+                  <input
+                    className={styles.input}
+                    type="text"
+                    placeholder="Your name *"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    autoFocus
+                  />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    placeholder="Company (optional)"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                  />
+                </div>
+
+                <div className={styles.feedbackSection}>
+                  <textarea
+                    className={styles.textarea}
+                    placeholder="Share your thoughts, suggestions, or anything on your mind…"
+                    value={feedback}
+                    onChange={(e) => setFeedback(e.target.value)}
+                    rows={4}
+                  />
+                </div>
+
+                <button
+                  className={styles.submitBtn}
+                  onClick={handleSubmit}
+                  disabled={!name.trim() || loading}
+                >
+                  {loading ? "Sending…" : "Say hello 👋"}
                 </button>
               </div>
             </>
