@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { motion, type Variants } from "motion/react";
 import styles from "./Contact.module.css";
+import ThankYouModal from "../ThankYouModal/ThankYouModal";
 
 const EMAIL = "ashusingh15082001@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/ashish-singh-4675aa192/";
@@ -60,51 +62,77 @@ const LINKS = [
 ];
 
 export default function Contact() {
+  const footerRef = useRef<HTMLElement>(null);
+  const [showModal, setShowModal] = useState(false);
+  const hasShown = useRef(false);
+
+  useEffect(() => {
+    const el = footerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasShown.current) {
+          hasShown.current = true;
+          setTimeout(() => setShowModal(true), 600);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className={styles.footer}>
-      <motion.div
-        className={styles.inner}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        variants={containerVariants}
-      >
-        <motion.div className={styles.headingBlock} variants={itemVariants}>
-          <h2 className={styles.heading}>Get in touch.</h2>
-          <p className={styles.subheading}>
-            I&apos;m always open to new opportunities, collaborations, or just a
-            friendly chat.
-          </p>
+    <>
+      {showModal && <ThankYouModal onClose={() => setShowModal(false)} />}
+
+      <footer ref={footerRef} className={styles.footer}>
+        <motion.div
+          className={styles.inner}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={containerVariants}
+        >
+          <motion.div className={styles.headingBlock} variants={itemVariants}>
+            <h2 className={styles.heading}>Get in touch.</h2>
+            <p className={styles.subheading}>
+              I&apos;m always open to new opportunities, collaborations, or just a
+              friendly chat.
+            </p>
+          </motion.div>
+
+          <div className={styles.cardsRow}>
+            {LINKS.map((link) => (
+              <motion.a
+                key={link.label}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                className={styles.card}
+                variants={itemVariants}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <div className={styles.iconCircle}>
+                  <span className={styles.iconText}>{link.icon}</span>
+                </div>
+                <div className={styles.cardBody}>
+                  <span className={styles.cardLabel}>{link.label}</span>
+                  <p className={styles.cardDesc}>{link.description}</p>
+                  <span className={styles.cardSub}>{link.sub}</span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+
+          <motion.p className={styles.copyright} variants={itemVariants}>
+            &copy; {new Date().getFullYear()} Ashish Singh. All rights reserved.
+          </motion.p>
         </motion.div>
-
-        <div className={styles.cardsRow}>
-          {LINKS.map((link) => (
-            <motion.a
-              key={link.label}
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              className={styles.card}
-              variants={itemVariants}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <div className={styles.iconCircle}>
-                <span className={styles.iconText}>{link.icon}</span>
-              </div>
-              <div className={styles.cardBody}>
-                <span className={styles.cardLabel}>{link.label}</span>
-                <p className={styles.cardDesc}>{link.description}</p>
-                <span className={styles.cardSub}>{link.sub}</span>
-              </div>
-            </motion.a>
-          ))}
-        </div>
-
-        <motion.p className={styles.copyright} variants={itemVariants}>
-          &copy; {new Date().getFullYear()} Ashish Singh. All rights reserved.
-        </motion.p>
-      </motion.div>
-    </footer>
+      </footer>
+    </>
   );
 }

@@ -1,0 +1,141 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--color-bg);
+  border: 2px solid var(--color-tag-border);
+  border-radius: 28px;
+  padding: 52px 48px;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-light);
+  opacity: 0.45;
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+  background: var(--gradient-headline);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+  text-align: center;
+}
+
+.subtext {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.2vw, 17px);
+  line-height: 1.6;
+  color: var(--color-light);
+  opacity: 0.6;
+  text-align: center;
+  margin: 0;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(219, 166, 244, 0.04);
+  border: 2px solid var(--color-tag-border);
+  border-radius: 14px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-light);
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--color-light);
+  opacity: 0.35;
+}
+
+.input:focus {
+  border-color: rgba(219, 166, 244, 0.8);
+  background: rgba(219, 166, 244, 0.08);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: var(--gradient-headline);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.submitBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.successText {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.2vw, 17px);
+  line-height: 1.6;
+  color: var(--color-light);
+  opacity: 0.7;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 40px 28px;
+  }
+}
