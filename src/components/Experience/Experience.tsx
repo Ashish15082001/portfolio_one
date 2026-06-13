@@ -4,6 +4,7 @@ import Image from "next/image";
 import Step, { StepProps } from "../step/Step";
 import styles from "./Experience.module.css";
 import appShowcase from "@/images/app-showcase.png";
+import matchShowcase from "@/images/match-showcase.png";
 import twinkle from "@/animations/twinkle.json";
 import { LottieAnimation } from "../LottieAnimation/LottieAnimation";
 import curvedBottomRightArrowSunset from "@/icons/curved-bottom-right-arrow-sunset.svg";
@@ -23,18 +24,40 @@ const viewport = { once: false, amount: 0.4 };
 
 const Experience: StepProps[] = [
   {
-    title: "Smilebots",
-    subtitle: "September 2022 - Present",
+    title: "SmileBots",
+    subtitle: "Software Engineer - Frontend · Jun 2023 – Present",
     description: [
-      "I joined Smilebots as a Junior Frontend Developer and started working on a product called Netpractice, which was still in its early stages at the time.",
-      "I researched whether to use React Native or Capacitor and also contributed to initial UI components using Figma.",
-      "Today, the app has grown to 250K+ downloads. Our goal is to help students practice effectively for any exam using our Neo AI Coach.",
-      "Users can also play live matches with their friends, making learning more interactive.",
-      "I designed and developed the core frontend architecture for most of the app’s features.",
+      "Owned frontend architecture end-to-end — established coding standards, led code reviews, and mentored junior engineers, reducing production regressions and improving release stability.",
+      "Engineered a real-time multiplayer quiz using WebSockets with sub-second latency, and shipped an offline-first architecture that reduced API dependency by over 50%.",
+      "Built a reusable component library and design system with Storybook and MUI, and drove Core Web Vitals improvements via code splitting, lazy loading, and rendering optimisation.",
+      "Implemented OWASP-aligned security practices (JWT auth, protected routes, RBAC), integrated Firebase, GA4, and Google Ads tracking, and owned a Next.js sports booking platform end-to-end.",
     ],
     highlights: [
       {
-        text: "Contributed from the very early stage of the product to scaling it to 250K+ users.",
+        text: "Scaled NetPractice from an early-stage product to 250K+ users on Google Play Store.",
+      },
+    ],
+    image: <Image src={matchShowcase} alt="Match Showcase" />,
+    isReversed: true,
+    theme: "sunset",
+    links: [
+      {
+        text: "Developer Website",
+        url: "https://netpractice.app/",
+      },
+    ],
+  },
+  {
+    title: "SmileBots",
+    subtitle: "Junior Software Engineer - Frontend · Sep 2022 – May 2023",
+    description: [
+      "Joined at an early stage of the product and helped shape its foundations — contributed to initial UI components, researched tech stack decisions (React Native vs Capacitor), and shipped the first production builds.",
+      "Built and scaled multi-platform apps (Web, PWA, Android, Desktop, iOS) using React Native, Capacitor, and Electron, reducing development and maintenance effort across platforms.",
+      "Improved accessibility across responsive interfaces using semantic HTML, keyboard navigation, focus management, and WCAG-aligned frontend practices.",
+    ],
+    highlights: [
+      {
+        text: "Contributed from day one of the product — before the first public release.",
       },
     ],
     image: <Image src={appShowcase} alt="App Showcase" />,
@@ -81,7 +104,7 @@ export default function MyExperience() {
             whileInView="visible"
             viewport={viewport}
           >
-            I landed my first job as a Junior Frontend Developer at Smilebots!
+            4 years. 250K+ users. One product, built from the ground up.
           </motion.p>
         </div>
       </section>

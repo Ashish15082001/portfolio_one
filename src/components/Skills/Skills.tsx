@@ -4,64 +4,28 @@ import { motion, type Variants } from "motion/react";
 import styles from "./Skills.module.css";
 
 const SKILL_ROWS = [
-  {
-    skill: "HTML5",
-    experience: "4 years",
-  },
-  {
-    skill: "CSS3",
-    experience: "4 years",
-  },
-  {
-    skill: "Javascript",
-    experience: "4 years",
-  },
-  {
-    skill: "TypeScript",
-    experience: "3 years",
-  },
-  {
-    skill: "React",
-    experience: "4 years",
-  },
-  {
-    skill: "NextJS",
-    experience: "2 years",
-  },
-
-  {
-    skill: "NodeJs",
-    experience: "1 year",
-  },
-  {
-    skill: "ExpressJS",
-    experience: "1 year",
-  },
-  {
-    skill: "Product Design",
-    experience: "1 year",
-  },
-
-  {
-    skill: "Web Development",
-    experience: "4 years",
-  },
-  {
-    skill: "Android Development",
-    experience: "3 years",
-  },
-  {
-    skill: "IOS Development",
-    experience: "1 year",
-  },
-  {
-    skill: "Guitar",
-    experience: "1 year",
-  },
-  {
-    skill: "Cooking",
-    experience: "1 year",
-  },
+  { skill: "HTML5", experience: "4 years" },
+  { skill: "CSS3", experience: "4 years" },
+  { skill: "JavaScript", experience: "4 years" },
+  { skill: "TypeScript", experience: "4 years" },
+  { skill: "React", experience: "4 years" },
+  { skill: "Redux Toolkit", experience: "4 years" },
+  { skill: "Next.js", experience: "4 years" },
+  { skill: "React Native", experience: "4 years" },
+  { skill: "PWA", experience: "4 years" },
+  { skill: "Capacitor", experience: "4 years" },
+  { skill: "Node.js", experience: "2 years" },
+  { skill: "MongoDB", experience: "2 years" },
+  { skill: "WebSockets", experience: "3 years" },
+  { skill: "Firebase", experience: "4 years" },
+  { skill: "Storybook", experience: "2 years" },
+  { skill: "Jest & RTL", experience: "2 years" },
+  { skill: "Playwright", experience: "4 years" },
+  { skill: "Performance", experience: "4 years" },
+  { skill: "Web Security", experience: "4 years" },
+  { skill: "Figma", experience: "4 years" },
+  { skill: "Guitar", experience: "1 year" },
+  { skill: "Cooking", experience: "1 year" },
 ];
 
 const containerVariants: Variants = {

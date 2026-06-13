@@ -68,6 +68,7 @@
   display: block;
 }
 
+
 @media (max-width: 1024px) {
   .rightDescription {
     margin-top: 0;
